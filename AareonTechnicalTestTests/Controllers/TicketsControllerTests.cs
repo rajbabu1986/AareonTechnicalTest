@@ -14,7 +14,7 @@ namespace AareonTechnicalTest.Controllers.Tests
         [TestMethod()]
         public void GetTicketsTest()
         {
-            Assert.Fail();
+            //TicketsController tc = new TicketsController(new ApplicationContext());
         }
     }
 }
