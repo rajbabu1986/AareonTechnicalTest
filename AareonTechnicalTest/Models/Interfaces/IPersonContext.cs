@@ -1,6 +1,11 @@
-﻿namespace AareonTechnicalTest.Models.Interfaces
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+
+namespace AareonTechnicalTest.Models.Interfaces
 {
-    public class IPersonContext
+    public interface IPersonContext : IDisposable
     {
+        DbSet<Person> Persons { get; }
+        int SaveChanges();
     }
 }

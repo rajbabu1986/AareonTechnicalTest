@@ -1,4 +1,5 @@
 ﻿using AareonTechnicalTest.Models;
+using AareonTechnicalTest.Models.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace AareonTechnicalTest
 {
-    public class ApplicationContext : DbContext
+    public class ApplicationContext : DbContext, IPersonContext
     {
+        public ApplicationContext()
+        {
+
+        }
+
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
@@ -93,5 +99,6 @@ namespace AareonTechnicalTest
             NotesConfig.Configure(modelBuilder);
             AuditConfig.Configure(modelBuilder);
         }
+
     }
 }

@@ -43,7 +43,6 @@ namespace AareonTechnicalTest.Controllers
         }
 
         // PUT: api/People/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPerson(int id, Person person)
         {
@@ -74,7 +73,6 @@ namespace AareonTechnicalTest.Controllers
         }
 
         // POST: api/People
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Person>> PostPerson(Person person)
         {
